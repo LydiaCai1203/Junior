@@ -1,0 +1,65 @@
+例子一：多个装饰器的修饰顺序
+def make_bond(fun):
+    print('----a----')
+
+    def inner():
+        print('----1----')
+        return '<b>' + fun() + '</b>'
+
+    return inner
+
+
+def make_italic(fun):
+    print('----b----')
+
+    def inner():
+        print('----2----')
+        return '<i>' + fun() + '</i>'
+
+    return inner
+
+
+@make_bond
+@make_italic
+def test():
+    print('----c----')
+    print('----3----')
+    return 'hello python decorator'
+
+
+ret = test()
+print(ret)
+
+例子二：修饰的原函数带参数
+def w_say(fun):
+
+    def inner(name):
+        print('say inner called')
+        fun(name)
+
+    return inner
+
+
+@w_say
+def hello(name):
+    print('hello', name)
+
+
+hello('xiaoming')
+
+例子三：带参数的装饰器
+def func_argv(pre):
+    def decorator(fun):
+        def inner():
+            print('visitor is %s' % pre)
+            fun()
+        return inner
+    return decorator
+
+
+@func_argv('xiaoqiang')
+def test_log():
+    print('this is test log.')
+
+
+test_log()

@@ -1,0 +1,11 @@
+compname=input("公司名称:")
+name=input("姓名（职位）:")
+telnum=input("电话:")
+email=input("邮箱:")
+
+print("**************************")
+print("公司名称"+'%9s' % compname+'\n')
+print("姓名（职位）"+'%5s'%name+'\n')
+print("电话"+'%13s' % telnum)
+print("邮箱"+'%13s' % email)
+print("**************************")

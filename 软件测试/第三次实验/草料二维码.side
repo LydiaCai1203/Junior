@@ -1,0 +1,325 @@
+{
+  "id": "4d7ee4ad-29f7-47d4-903a-977f9a09c0be",
+  "version": "1.1",
+  "name": "草料二维码",
+  "url": "https://cli.im",
+  "tests": [{
+    "id": "29d469fe-a70f-4f25-8db4-f7e9793c7631",
+    "name": "二维码生成",
+    "commands": [{
+      "id": "44be0a22-3119-402a-9ff0-0dd168e9ef04",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c26e862c-956d-44ac-948f-313e93a6b930",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "638x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7864d9d-f35c-4bc1-af80-69f04b6302d3",
+      "comment": "",
+      "command": "click",
+      "target": "id=text-content",
+      "targets": [
+        ["id=text-content", "id"],
+        ["name=text", "name"],
+        ["css=#text-content", "css"],
+        ["css=#text-content", "css:finder"],
+        ["xpath=//textarea[@id='text-content']", "xpath:attributes"],
+        ["xpath=//div[@id='textarea-box']/textarea", "xpath:idRelative"],
+        ["xpath=//div/div/div/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7899011-4319-4e91-b372-97ec33490678",
+      "comment": "",
+      "command": "type",
+      "target": "id=text-content",
+      "targets": [
+        ["id=text-content", "id"],
+        ["name=text", "name"],
+        ["css=#text-content", "css"],
+        ["css=#text-content", "css:finder"],
+        ["xpath=//textarea[@id='text-content']", "xpath:attributes"],
+        ["xpath=//div[@id='textarea-box']/textarea", "xpath:idRelative"],
+        ["xpath=//div/div/div/textarea", "xpath:position"]
+      ],
+      "value": "hello world"
+    }, {
+      "id": "8242a4ed-037d-4236-beb4-de358ad19676",
+      "comment": "",
+      "command": "click",
+      "target": "id=click-create",
+      "targets": [
+        ["id=click-create", "id"],
+        ["linkText=生成二维码", "linkText"],
+        ["css=#click-create", "css"],
+        ["css=.submit > #click-create", "css:finder"],
+        ["xpath=//a[contains(text(),'生成二维码')]", "xpath:link"],
+        ["xpath=//a[@id='click-create']", "xpath:attributes"],
+        ["xpath=//div[@id='trigger-type']/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:void(0);')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7abb057-581b-497b-942d-5a9c343dcf8f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=网址",
+      "targets": [
+        ["linkText=网址", "linkText"],
+        ["css=.\\[navigation_url\\]", "css:finder"],
+        ["xpath=//a[contains(text(),'网址')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//cli.im/url')]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87a4a73c-72e7-4ab1-a0e4-1c5b5a51936a",
+      "comment": "",
+      "command": "click",
+      "target": "id=url_content",
+      "targets": [
+        ["id=url_content", "id"],
+        ["name=text", "name"],
+        ["css=#url_content", "css"],
+        ["css=#url_content", "css:finder"],
+        ["xpath=//input[@id='url_content']", "xpath:attributes"],
+        ["xpath=//div[@id='url_main']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a3298ac-4a3d-4617-ae81-9da62214634a",
+      "comment": "",
+      "command": "type",
+      "target": "id=url_content",
+      "targets": [
+        ["id=url_content", "id"],
+        ["name=text", "name"],
+        ["css=#url_content", "css"],
+        ["css=#url_content", "css:finder"],
+        ["xpath=//input[@id='url_content']", "xpath:attributes"],
+        ["xpath=//div[@id='url_main']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "https://www.baidu.com"
+    }, {
+      "id": "961981f0-a8ce-464e-a35f-43e40d2a4f38",
+      "comment": "",
+      "command": "click",
+      "target": "id=click-create",
+      "targets": [
+        ["id=click-create", "id"],
+        ["linkText=生成二维码", "linkText"],
+        ["css=#click-create", "css"],
+        ["css=.submit > #click-create", "css:finder"],
+        ["xpath=//a[contains(text(),'生成二维码')]", "xpath:link"],
+        ["xpath=//a[@id='click-create']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, 'javascript:void(0);')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6dae997-43e4-463d-99fa-92ee684e6dad",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=文件",
+      "targets": [
+        ["linkText=文件", "linkText"],
+        ["css=.\\[navigation_files\\]", "css:finder"],
+        ["xpath=//a[contains(text(),'文件')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//cli.im/files')]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d87fa0fc-eac8-4d82-9eb3-9ab7c9e7ca2f",
+      "comment": "",
+      "command": "click",
+      "target": "id=filedatacode",
+      "targets": [
+        ["id=filedatacode", "id"],
+        ["name=Filedata", "name"],
+        ["css=#filedatacode", "css"],
+        ["css=#filedatacode", "css:finder"],
+        ["xpath=//input[@id='filedatacode']", "xpath:attributes"],
+        ["xpath=//div[@id='upload-before']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6e3165a-b12b-42b8-840e-c30dd3dc95d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.close",
+      "targets": [
+        ["css=button.close", "css"],
+        ["css=#modal-alert .close", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='modal-alert']/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d3fb6bd-cbac-4156-86bf-6250224852b6",
+      "comment": "",
+      "command": "click",
+      "target": "id=filedatacode",
+      "targets": [
+        ["id=filedatacode", "id"],
+        ["name=Filedata", "name"],
+        ["css=#filedatacode", "css"],
+        ["css=#filedatacode", "css:finder"],
+        ["xpath=//input[@id='filedatacode']", "xpath:attributes"],
+        ["xpath=//div[@id='upload-before']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "761328d9-a9ef-4e90-b10f-9d0184fa559f",
+      "comment": "",
+      "command": "type",
+      "target": "id=filedatacode",
+      "targets": [
+        ["id=filedatacode", "id"],
+        ["name=Filedata", "name"],
+        ["css=#filedatacode", "css"],
+        ["css=#filedatacode", "css:finder"],
+        ["xpath=//input[@id='filedatacode']", "xpath:attributes"],
+        ["xpath=//div[@id='upload-before']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\03 Wireshark_DNS_v7.0.pdf"
+    }, {
+      "id": "98e4693f-7bfe-493d-a40a-a4f248c8464a",
+      "comment": "",
+      "command": "click",
+      "target": "id=click-create",
+      "targets": [
+        ["id=click-create", "id"],
+        ["linkText=生成文件码", "linkText"],
+        ["css=#click-create", "css"],
+        ["css=.submit > #click-create", "css:finder"],
+        ["xpath=//a[contains(text(),'生成文件码')]", "xpath:link"],
+        ["xpath=//a[@id='click-create']", "xpath:attributes"],
+        ["xpath=//div[@id='qrgenerate-box']/div/div[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:void(0);')]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99281a7f-a5ca-4239-a0e2-88868b50d967",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "请先上传",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bdb43ff-ede8-4706-a983-8769d50fb4ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=click-create",
+      "targets": [
+        ["id=click-create", "id"],
+        ["linkText=生成文件码", "linkText"],
+        ["css=#click-create", "css"],
+        ["css=.submit > #click-create", "css:finder"],
+        ["xpath=//a[contains(text(),'生成文件码')]", "xpath:link"],
+        ["xpath=//a[@id='click-create']", "xpath:attributes"],
+        ["xpath=//div[@id='qrgenerate-box']/div/div[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:void(0);')]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bac2c5f2-0099-4d4a-bf75-a13b8396bea9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=图片",
+      "targets": [
+        ["linkText=图片", "linkText"],
+        ["css=.\\[navigation_img\\]", "css:finder"],
+        ["xpath=//a[contains(text(),'图片')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//cli.im/img')]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5732b191-ca9f-410b-b911-61c73c4b8ec2",
+      "comment": "",
+      "command": "click",
+      "target": "id=filedatacode",
+      "targets": [
+        ["id=filedatacode", "id"],
+        ["name=Filedata", "name"],
+        ["css=#filedatacode", "css"],
+        ["css=#filedatacode", "css:finder"],
+        ["xpath=//input[@id='filedatacode']", "xpath:attributes"],
+        ["xpath=//div[@id='upload-before']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07400443-ea50-4db7-84b3-0be2b5627650",
+      "comment": "",
+      "command": "type",
+      "target": "id=filedatacode",
+      "targets": [
+        ["id=filedatacode", "id"],
+        ["name=Filedata", "name"],
+        ["css=#filedatacode", "css"],
+        ["css=#filedatacode", "css:finder"],
+        ["xpath=//input[@id='filedatacode']", "xpath:attributes"],
+        ["xpath=//div[@id='upload-before']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\v2-dcef71380baf9140dd01587f2bb396f7_r.jpg"
+    }, {
+      "id": "f68a81ed-da56-4057-b677-c6ca8fe22d80",
+      "comment": "",
+      "command": "click",
+      "target": "id=click-create",
+      "targets": [
+        ["id=click-create", "id"],
+        ["linkText=生成图文码", "linkText"],
+        ["css=#click-create", "css"],
+        ["css=.submit > #click-create", "css:finder"],
+        ["xpath=//a[contains(text(),'生成图文码')]", "xpath:link"],
+        ["xpath=//a[@id='click-create']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, 'javascript:void(0);')]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca6defcd-6a81-43fd-a5cf-f61757ea99c0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=名片",
+      "targets": [
+        ["linkText=名片", "linkText"],
+        ["css=.\\[navigation_vcard\\]", "css:finder"],
+        ["xpath=//a[contains(text(),'名片')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//cli.im/vcard')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e761f5e9-0001-47a9-8400-414d7199bb43",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["29d469fe-a70f-4f25-8db4-f7e9793c7631"]
+  }],
+  "urls": ["https://cli.im/"],
+  "plugins": []
+}

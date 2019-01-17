@@ -1,0 +1,190 @@
+所有考试题目来自书上习题
+第七版中文教材：
+第一章：计算机网络和因特网
+46页
+第4题
+列出6种接入技术：将它们分类为住宅接入，公司接入或广域无线接入
+R4. List six access technologies. Classify each one as home access, enterprise access, or wide- area wireless access.
+
+1.Dial-up modem over telephone line: home
+2.DSL over telephone line: home or small office
+3.Cable to HFC: home
+4.100 Mbps switched Ethernet: enterprise
+5.Wifi (802.11): home and enterprise
+6.3G and 4G: wide-area wireless
+
+
+第10题
+描述今天最为流行的无线因特网接入技术，对它们进行比较和对照
+R10. Describe the most popular wireless Internet access technologies today. ­Compare and contrast them.
+
+There are two popular wireless Internet access technologies today:
+a) Wifi (802.11) In a wireless LAN, wireless users transmit/receive packets to/from a
+base station (i.e., wireless access point) within a radius of few tens of meters. The
+base station is typically connected to the wired Internet and thus serves to connect
+wireless users to the wired network.
+b) 3G and 4G wide-area wireless access networks. In these systems, packets are
+transmitted over the same wireless infrastructure used for cellular telephony, with the base station thus being managed by a telecommunications provider. This provides
+wireless access to users within a radius of tens of kilometers of the base station.
+
+
+第12题
+与分组交换网络相比，电路交换网络有哪些优点？在电路交换网络中，TDM比FDM有哪些优点？
+R12. What advantage does a circuit-switched network have over a packet-switched network? What advantages does TDM have over FDM in a circuit-switched network?
+
+A circuit-switched network can guarantee a certain amount of end-to-end bandwidth
+for the duration of a call. Most packet-switched networks today (including the
+Internet) cannot make any end-to-end guarantees for bandwidth. FDM requires
+sophisticated analog hardware to shift signal into appropriate frequency bands.
+
+
+第14题
+为什么等级结构中级别相同的两个ISP通常互相对等？某IXP是如何挣钱的？
+R14. Why will two ISPs at the same level of the hierarchy often peer with each other? How does an IXP earn money?
+
+If the two ISPs do not peer with each other, then when they send traffic to each other
+they have to send the traffic through a provider ISP (intermediary), to which they
+have to pay for carrying the traffic. By peering with each other directly, the two ISPs
+can reduce their payments to their provider ISPs. An Internet Exchange Point (IXP)
+(typically in a standalone building with its own switches) is a meeting point where
+multiple ISPs can connect and/or peer together. An IXP earns its money by charging
+each of the the ISPs that connect to the IXP a relatively small fee, which may depend
+on the amount of traffic sent to or received from the IXP.
+
+26
+病毒和蠕虫之间有什么不同？
+R26. What is the difference between a virus and a worm?
+
+a) Virus
+Requires some form of human interaction to spread. Classic example: E-mail
+viruses.
+b) Worms
+No user replication needed. Worm in infected host scans IP addresses and port
+numbers, looking for vulnerable processes to infect.
+
+27
+描述如何产生一个僵尸网络，以及僵尸网络是怎样被用于DDos攻击的。
+R27. Describe how a botnet can be created and how it can be used for a DDoS attack.
+
+Creation of a botnet requires an attacker to find vulnerability in some application or
+system (e.g. exploiting the buffer overflow vulnerability that might exist in an
+application). After finding the vulnerability, the attacker needs to scan for hosts that
+are vulnerable. The target is basically to compromise a series of systems by
+exploiting that particular vulnerability. Any system that is part of the botnet can
+automatically scan its environment and propagate by exploiting the vulnerability. An
+important property of such botnets is that the originator of the botnet can remotely
+control and issue commands to all the nodes in the botnet. Hence, it becomes
+possible for the attacker to issue a command to all the nodes, that target a single
+node (for example, all nodes in the botnet might be commanded by the attacker to
+send a TCP SYN message to the target, which might result in a TCP SYN flood
+attack at the target)
+
+第二章 应用层
+
+113页
+11
+为什么HTTP,SMTP及POP3都运行在TCP，而不是UDP上？
+R11. Why do HTTP, SMTP, and POP3 run on top of TCP rather than on UDP?
+
+The applications associated with those protocols require that all application data be
+received in the correct order and without gaps. TCP provides this service whereas
+UDP does not.
+
+16
+假定Alice使用一个基于Web的电子邮件账户（例如Hotmail或Gmail）向Bob发报文，而Bob使用POP3从他的邮件服务器访问自己的邮件。
+讨论该报文是如何从Alice主机到Bob主机的。要列出在两台主机间移动该报文时所使用的各种应用层协议。
+R16. Suppose Alice, with a Web-based e-mail account (such as Hotmail or Gmail), sends a message to Bob, who accesses his mail from his mail server using POP3. Discuss how the
+message gets from Alice’s host to Bob’s host. Be sure to list the series of application-layer protocols that are used to move the message between the two hosts.
+
+The message is first sent from Alice’s host to her mail server over HTTP. Alice’s
+mail server then sends the message to Bob’s mail server over SMTP. Bob then
+transfers the message from his mail server to his host over POP3.
+
+
+120*******************************************************************************************
+dns实验
+
+第三章 运输层
+
+189页
+p4
+a.假定你有下列两个字节：01011100和01100101。这两个字节之和的反码是什么？
+b.假定你有下列两个字节：11011010和01100101。这两个字节之和的反码是什么？
+c.对于(a)中的字节，给出一个例子，使得这2个字节中的每一个都在一个比特反转时，其反码不会改变
+P4.a. Suppose you have the following 2 bytes: 01011100 and 01100101. What is the 1s complement of the sum of these 2 bytes?
+b. Suppose you have the following 2 bytes: 11011010 and 01100101. What is the 1s complement of the sum of these 2 bytes?
+c. For the bytes in part (a), give an example where one bit is flipped in each of the 2 bytes and yet the 1s complement doesn’t change.
+
+a) Adding the two bytes gives 11000001. Taking the one’s complement gives 00111110.
+b) Adding the two bytes gives 01000000; the one’s complement gives 10111111.
+c) First byte = 01010100; second byte = 01101101.
+
+p8接收方，发送方也加上
+画出协议rdt3.0中接收方的FSM
+P8. Draw the FSM for the receiver side of protocol rdt3.0.
+
+The sender side of protocol rdt3.0 differs from the sender side of protocol 2.2 in that
+timeouts have been added. We have seen that the introduction of timeouts adds the
+possibility of duplicate packets into the sender-to-receiver data stream. However, the
+receiver in protocol rdt.2.2 can already handle duplicate packets. (Receiver-side
+duplicates in rdt 2.2 would arise if the receiver sent an ACK that was lost, and the sender
+then retransmitted the old data). Hence the receiver in protocol rdt2.2 will also work as
+the receiver in protocol rdt 3.0
+
+p31
+假设测量的5个SampleRTT值（参见3.5.3节）是106ms，120ms，140ms，90ms和115ms。在获得
+了每个SampleRTT值后计算EstimateRTT，使用α=0.125并且假设在刚获得前5个样本之后EstimatedRTT
+值为100ms。在获得每个样本之后，也计算DevRTT，假设β=0.25，并且假设在刚获得前五个样本之后
+DevRTT的值为5ms。最后，在获得这些样本之后计算TCP TimeoutInterval。
+P31. Suppose that the five measured SampleRTT values (see Section 3.5.3 ) are 106 ms, 120
+ms, 140 ms, 90 ms, and 115 ms. Compute the EstimatedRTT after each of these SampleRTT
+values is obtained, using a value of α=0.125 and assuming that the value of EstimatedRTT
+was 100 ms just before the first of these five samples were obtained. Compute also the DevRTT
+after each sample is obtained, assuming a value of β=0.25 and assuming the value of DevRTT was 5 ms just before the first of these five samples was obtained. Last, compute the TCP
+TimeoutInterval after each of these samples is obtained.
+
+DevRTT = (1- beta) * DevRTT + beta * | SampleRTT - EstimatedRTT |
+EstimatedRTT = (1-alpha) * EstimatedRTT + alpha * SampleRTT
+TimeoutInterval = EstimatedRTT + 4 * DevRTT
+After obtaining first SampleRTT 106ms:
+DevRTT = 0.75*5 + 0.25 * | 106 - 100 | = 5.25ms
+EstimatedRTT = 0.875 * 100 + 0.125 * 106 = 100.75 ms
+TimeoutInterval = 100.75+4*5.25 = 121.75 ms
+After obtaining 120ms:
+DevRTT = 0.75*5.25 + 0.25 * | 120 – 100.75 | = 8.75 ms
+EstimatedRTT = 0.875 * 100.75 + 0.125 * 120 = 103.16 ms
+TimeoutInterval = 103.16+4*8.75 = 138.16 ms
+After obtaining 140ms:
+DevRTT = 0.75*8.75 + 0.25 * | 140 – 103.16 | = 15.77 ms
+EstimatedRTT = 0.875 * 103.16 + 0.125 * 140 = 107.76 ms
+TimeoutInterval = 107.76+4*15.77 = 170.84 ms
+After obtaining 90ms:
+DevRTT = 0.75*15.77 + 0.25 * | 90 – 107.76 | = 16.27 ms
+EstimatedRTT = 0.875 * 107.76 + 0.125 * 90 = 105.54 ms
+TimeoutInterval = 105.54+4*16.27 =170.62 ms
+After obtaining 115ms:
+DevRTT = 0.75*16.27 + 0.25 * | 115 – 105.54 | = 14.57 ms
+EstimatedRTT = 0.875 * 105.54 + 0.125 * 115 = 106.72 ms
+TimeoutInterval = 106.72+4*14.57 =165 ms
+
+第四章
+237页
+22题
+IP地址223.1.3.27的32比特二进制等价形式是什么？
+R22. What is the 32-bit binary equivalent of the IP address 223.1.3.27?
+
+11011111 00000001 00000011 00011011.
+
+279页
+p3
+考虑下面的网络。对于标明的链路开销，用Dijkstra的最短路径法计算出从x到所有网络节点的最短路径。通过计算一个类似5-1的表，说明该算法是如何工作的。
+P3. Consider the following network. With the indicated link costs, use Dijkstra’s shortest-path algorithm to compute the shortest path from x to all network nodes. Show how the algorithm works by computing a table similar to Table 5.1 .
+
+Step N’      D(t),p(t) D(u),p(u) D(v),p(v) D(w),p(w) D(y),p(y) D(z),p(z)
+0    x       ∞         ∞         3,x       6,x       6,x       8,x
+1    xv      7,v       6,v       3,x       6,x       6,x       8,x
+2    xvu     7,v       6,v       3,x       6,x       6,x       8,x
+3    xvuw    7,v       6,v       3,x       6,x       6,x       8,x
+4    xvuwy   7,v       6,v       3,x       6,x       6,x       8,x
+5    xvuwyt  7,v       6,v       3,x       6,x       6,x       8,x
+6    xvuwytz 7,v       6,v       3,x       6,x       6,x       8,x
