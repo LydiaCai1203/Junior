@@ -1,0 +1,7 @@
+The class: describes a statement which may include one or many sub-statements.
+     The sub-statements are stored in the vector data member.
+
+     At the toppest level, the entire program  can be viewed as a compound statement.
+
+Operations:
+nput(): reads in statements until encountering a "}'  character or the end-of-file character.

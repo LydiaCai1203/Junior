@@ -1,0 +1,18 @@
+A = B ;
+C = D ;
+if ( B == D )
+{
+    C = D ;
+    if ( A == A )
+    {
+        D = D ;
+    }
+    else
+    {
+        A = A ;
+    }
+    do
+    {
+        A = D ;
+    } while ( A >= D ) ;
+}

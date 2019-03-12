@@ -1,0 +1,39 @@
+The class: describes any type of statement of the programming language.
+
+Data members: 
+parent: This field is included here to implement the constraint "the if-else statement 
+    can not  appear within a do-while statement".  
+
+    For the requirement of the first exercise, it is redundent since the if-else statement
+    is directly embedded by the do-while statement. During constructing the 
+    do-while statement, we can implement the constraint simply. 
+    
+    But for a more complex program, this field is useful to traverse up within the tree 
+    hierarchy.  For example, if the "for-loop" statement is appended to the programming 
+    language,   we may have a program like:
+    do {
+          for ( ... ) {
+                 for ( ... ) {
+                         if ( ...) {  ... } else { ... };
+                 }
+          }
+    } while ( A == B ) ;
+   
+  That is, the if-else statement is in-directly embedded within the do-while statement. 
+   In this case, the parent  field allows us to traverse up the hierarcy tree to search
+   whethere there is a do-while statement enclosing the if-else statement.
+   
+   Thus, inclusion of the parent field in the root class makes our system extensible.
+
+The operations:
+Input(): is responsible of reading a complete statement from the input file stream and
+   constructing a statement object correspondingly.
+
+   To judge the type of a statement, we must read the first identifier of the statement,  
+   which is passed as the second argument "first".  After processing of the current 
+   statement, the "first" argument stores the identifier that immediately follows the 
+   current statement. Thus, "first" is an input-output-argument.  
+
+Output: "ind" is the number of leading space characters of a statement.
+
+Indent: print "ind" leading space characters.

@@ -1,0 +1,16 @@
+The class: Both the if-statement and the if-else-statement  are described by this
+     class. The if-statement is regarded as a special case of the if-else-statement.
+     The reason to do this is that when we encounter a "if"keyword, we can not 
+     judge whether the following statement is a if-statement or a if-else statement.
+     Thus, if we used a "if-statement" class and a "if-else-statement" class to describe
+     the two types of statements separately, we would encounter difficulty in the
+     decision of the types of the object to create when we encounter the "if" keyword.
+
+Data members:
+cmp_left, cmp, cmp_right: to store a boolean expression which has the form
+     ( cmp_left  cmp  cmp_right )separator: the CompoundStatement::children vector is 
+    separated into two parts.   The elements whose indexes are smaller than this field 
+    store the statements    appearing after the if keyword but before the else (if any)        
+    keyword, while the  remaining elements store those appearing after the else 
+    (if any) keyword.    If this field equals to the size of the vector, the object stores an if 
+    statement.

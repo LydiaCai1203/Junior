@@ -1,0 +1,2 @@
+Data members:
+left, right:  the left and right identifier of the assignment statement.

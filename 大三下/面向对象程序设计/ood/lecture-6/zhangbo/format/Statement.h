@@ -1,0 +1,93 @@
+// Copyright (C) 1991 - 1999 Rational Software Corporation
+#include <fstream>
+using namespace std;
+
+#if defined (_MSC_VER) && (_MSC_VER >= 1000)
+#pragma once
+#endif
+#ifndef _INC_STATEMENT_3E0F9249003E_INCLUDED
+#define _INC_STATEMENT_3E0F9249003E_INCLUDED
+
+
+class CompoundStatement;
+
+//The class: describe any type of statement of the 
+//programming language.
+//
+//Data members: 
+//parent: This field is included here to implement the 
+//constraint "the if-else statement 
+//    can not  appear within a do-while statement".  
+//
+//    For the requirement of the Lab. exercise, it is 
+//redundent since the if-else statement
+//    must be directly embedded by the do-while statement. 
+//During constructing the 
+//    do-while statement, we can implement the constraint 
+//simply. 
+//    
+//    But for a more complex, this field is useful to 
+//traverse up within the tree hierarchy. 
+//    For example, if the "for-loop" statement is appended to 
+//the programming language,
+//    we may have a program like:
+//    do {
+//          for ( ... ) {
+//                 for ( ... ) {
+//                         if ( ...) {  ... } else { ... };
+//                 }
+//          }
+//    } while ( A == B ) ;
+//   
+//  That is, the if-else statement is in-directly embedded 
+//within the do-while statement. 
+//   In this case, the parent  field allows us to traverse up 
+//the hierarcy tree to search
+//   whethere there is a do-while statement enclosing the 
+//if-else statement.
+//   
+//   Thus, inclusion of the parent field in the root class 
+//makes our system extensible.
+//
+//The operations:
+//Input(): is responsible of reading a complete statement 
+//from the input file stream and
+//   constructing a statement object correspondingly.
+//
+//   To judge the type of a statement, we must read the first 
+//identifier of the statement,  
+//   which is stored in the second argument "first".  After 
+//processing of the current 
+//   statement, the "first" argument stores the identifier 
+//that immediately follows the 
+//   current statement. Thus, "first" is an 
+//input-output-argument.  
+//
+//Output: "ind" is the number of leading spaces of a 
+//statement.
+//
+//In
+//##ModelId=3E0F9249003E
+class Statement 
+{
+protected:
+	//##ModelId=3E10F49901E4
+	Indent(ofstream& outf, int ind);
+
+public:
+	//##ModelId=3E0F9249006F
+	CompoundStatement* theCompoundStatement;
+
+	//##ModelId=3E0F9249003F
+	virtual Input(ifstream& inf, string& first);
+
+	//##ModelId=3E0F92490042
+	virtual Output(ofstream& outf, int ind);
+
+private:
+	//##ModelId=3E0F92490045
+	Statement* parent;
+
+};
+
+#endif /* _INC_STATEMENT_3E0F9249003E_INCLUDED */
